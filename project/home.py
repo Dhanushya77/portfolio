@@ -21,8 +21,8 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'  # Use Gmail SMTP server
 app.config['MAIL_PORT'] = 587  # Port for Gmail SMTP
 app.config['MAIL_USE_TLS'] = True  
 app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_USERNAME'] = 'dhanushyavs@gmail.com'
-app.config['MAIL_PASSWORD'] = 'pwmr uakz ejtq hjio'  
+app.config['MAIL_USERNAME'] = 'dhanushyaportfolio@gmail.com'
+app.config['MAIL_PASSWORD'] = 'qdxe qriv lwuu lgeu'  
 app.config['MAIL_DEFAULT_SENDER'] = 'your_email@gmail.com'
 
 mail = Mail(app)
@@ -43,7 +43,7 @@ def contact():
         # Create the email message
         msg = Message(
             subject=f"{name} contacting you via portfolio",
-            recipients=['dhanushyavs@gmail.com'], 
+            recipients=['dhanushyaportfolio@gmail.com'], 
             body=f"Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}"
         )
 
