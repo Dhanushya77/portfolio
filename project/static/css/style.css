@@ -91,43 +91,6 @@ span {
 }
 
 /* Responsive styles */
-@media (max-width: 480px) {
-    .bx-menu {
-        display: block !important;
-    }
-
-    .navlist {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: -1000px;
-        right: 0;
-        left: 0;
-        background: var(--bg-color);
-        text-align: left;
-        transition: all .45s ease;
-    }
-
-    .navlist a {
-        display: block;
-        padding: 17px;
-        font-size: 20px;
-        color: var(--text-color);
-        transition: all .45s ease;
-    }
-
-    .navlist a:hover {
-        color: var(--main-color);
-    }
-
-    .navlist.open {
-        top: 60px;
-    }
-
-    .menu-toggle:checked+.bx-menu+.navlist {
-        top: 60px;
-    }
-}
 
 
 section {
@@ -619,7 +582,130 @@ form textarea {
 
 }
 
+
+
+
+
+/* animations for home */
+
+
+.home-text .slide span {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideIn 1s ease-out forwards;
+}
+
+.home-text .slide .one {
+    animation-delay: 0.3s;
+}
+
+.home-text .slide .two {
+    animation-delay: 0.6s;
+}
+
+
+.home-text h1,
+.home-text h3 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.home-text h1 {
+    animation-delay: 1s;
+}
+
+.home-text h3 {
+    animation-delay: 1.3s;
+}
+
+.home-text p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 1.6s;
+}
+
+
+.button .btn1,
+.button .btn2 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.button .btn1 {
+    animation-delay: 2s;
+}
+
+.button .btn2 {
+    animation-delay: 2.3s;
+}
+
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
 @media (max-width: 480px) {
+    .about-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-text h4 {
+        font-size: 18px;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+    }
+    .bx-menu {
+        display: block !important;
+    }
+
+    .navlist {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        background: var(--bg-color);
+        text-align: left;
+        transition: all .45s ease;
+    }
+
+    .navlist a {
+        display: block;
+        padding: 17px;
+        font-size: 20px;
+        color: var(--text-color);
+        transition: all .45s ease;
+    }
+
+    .navlist a:hover {
+        color: var(--main-color);
+    }
+
+    .navlist.open {
+        top: 60px;
+    }
+
+    .menu-toggle:checked+.bx-menu+.navlist {
+        top: 60px;
+    }
     #menu-icon {
         display: block;
     }
@@ -706,179 +792,6 @@ form textarea {
         align-items: start;
     }
 
-}
-
-
-@media (max-width: 768px) {
-    .about {
-        grid-template-columns: 1fr;
-    }
-
-    .about-img img {
-        max-width: 100%;
-        border-radius: 10px;
-    }
-
-    .about-text h2 {
-        font-size: 2rem;
-    }
-
-    .about-text h4 {
-        font-size: 20px;
-        margin: 10px 0 20px;
-    }
-
-    .about-text p {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    .about-text a {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .about-text h2 {
-        font-size: 1.6rem;
-    }
-
-    .about-text h4 {
-        font-size: 18px;
-    }
-
-    .about-text p {
-        font-size: 0.95rem;
-    }
-}
-
-
-
-/* animations for home */
-
-
-.home-text .slide span {
-    opacity: 0;
-    transform: translateX(-30px);
-    animation: slideIn 1s ease-out forwards;
-}
-
-.home-text .slide .one {
-    animation-delay: 0.3s;
-}
-
-.home-text .slide .two {
-    animation-delay: 0.6s;
-}
-
-
-.home-text h1,
-.home-text h3 {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-.home-text h1 {
-    animation-delay: 1s;
-}
-
-.home-text h3 {
-    animation-delay: 1.3s;
-}
-
-.home-text p {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-out forwards;
-    animation-delay: 1.6s;
-}
-
-
-.button .btn1,
-.button .btn2 {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-.button .btn1 {
-    animation-delay: 2s;
-}
-
-.button .btn2 {
-    animation-delay: 2.3s;
-}
-
-
-@keyframes slideIn {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-
-    .home-text .slide span {
-        animation-duration: 0.8s;
-        animation-delay: 0.2s;
-    }
-
-    .home-text h1,
-    .home-text h3 {
-        animation-duration: 0.9s;
-    }
-
-    .home-text p {
-        animation-duration: 0.9s;
-    }
-
-    .button .btn1,
-    .button .btn2 {
-        animation-duration: 1s;
-    }
-
-
-    .home-text .slide .one {
-        animation-delay: 0.5s;
-    }
-
-    .home-text .slide .two {
-        animation-delay: 0.8s;
-    }
-
-    .home-text h1 {
-        animation-delay: 1.2s;
-    }
-
-    .home-text h3 {
-        animation-delay: 1.5s;
-    }
-
-    .home-text p {
-        animation-delay: 1.8s;
-    }
-
-    .button .btn1 {
-        animation-delay: 2.2s;
-    }
-
-    .button .btn2 {
-        animation-delay: 2.5s;
-    }
-}
-
-@media (max-width: 480px) {
-
     .home-text .slide span {
         animation-duration: 0.6s;
     }
@@ -930,8 +843,84 @@ form textarea {
 
 
 @media (max-width: 768px) {
+    .menu-toggle{
+        display: block !important;
+    }
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-img img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text h4 {
+        font-size: 20px;
+        margin: 10px 0 20px;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-text a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .home-text .slide span {
+        animation-duration: 0.8s;
+        animation-delay: 0.2s;
+    }
+
+    .home-text h1,
+    .home-text h3 {
+        animation-duration: 0.9s;
+    }
+
+    .home-text p {
+        animation-duration: 0.9s;
+    }
+
+    .button .btn1,
+    .button .btn2 {
+        animation-duration: 1s;
+    }
 
 
+    .home-text .slide .one {
+        animation-delay: 0.5s;
+    }
+
+    .home-text .slide .two {
+        animation-delay: 0.8s;
+    }
+
+    .home-text h1 {
+        animation-delay: 1.2s;
+    }
+
+    .home-text h3 {
+        animation-delay: 1.5s;
+    }
+
+    .home-text p {
+        animation-delay: 1.8s;
+    }
+
+    .button .btn1 {
+        animation-delay: 2.2s;
+    }
+
+    .button .btn2 {
+        animation-delay: 2.5s;
+    }
     body {
         font-size: 14px;
     }
@@ -1017,16 +1006,3 @@ form textarea {
 
 
 
-
-/* Extreme small screens (e.g., iPhone SE) */
-/* @media (max-width: 400px) {
-    .home {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .contact form input,
-    .contact form textarea {
-        font-size: 14px;
-    }
-} */
