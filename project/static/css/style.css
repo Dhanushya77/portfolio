@@ -843,9 +843,9 @@ form textarea {
 
 
 @media (max-width: 768px) {
-    .menu-toggle{
+    /* .menu-toggle{
         display: block !important;
-    }
+    } */
     .about {
         grid-template-columns: 1fr;
     }
